@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.myproject.todoappwithnodejs.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_finishedtasksfragment"
+            app:destination="@id/finishedtasksfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finishedtasksfragment"
+        android:name="com.myproject.todoappwithnodejs.ui.FinishedTasks.finishedtasksfragment"
+        android:label="fragment_finishedtasksfragment"
+        tools:layout="@layout/fragment_finishedtasksfragment" >
+        <action
+            android:id="@+id/action_finishedtasksfragment_to_logoutfragment"
+            app:destination="@id/logoutfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logoutfragment"
+        android:name="com.myproject.todoappwithnodejs.ui.Logout.logoutfragment"
+        android:label="fragment_logoutfragment"
+        tools:layout="@layout/fragment_logoutfragment" />
+
+</navigation>
